@@ -1,0 +1,17 @@
+[
+  {
+    "Id": 1,
+    "propertyId": "1",
+    "savedDate": "2024-01-15T10:30:00.000Z"
+  },
+  {
+    "Id": 2,
+    "propertyId": "3",
+    "savedDate": "2024-01-14T15:45:00.000Z"
+  },
+  {
+    "Id": 3,
+    "propertyId": "5",
+    "savedDate": "2024-01-13T09:20:00.000Z"
+  }
+]

@@ -1,0 +1,282 @@
+[
+  {
+    "Id": 1,
+    "title": "Modern Downtown Loft",
+    "price": 875000,
+    "address": {
+      "street": "123 Main Street",
+      "city": "Seattle",
+      "state": "WA",
+      "zipCode": "98101"
+    },
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "squareFeet": 1200,
+    "propertyType": "Condo",
+    "photos": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80",
+      "https://images.unsplash.com/photo-1556909075-f3122bce6614?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    ],
+    "description": "Stunning modern loft in the heart of downtown Seattle. Floor-to-ceiling windows offer breathtaking city views. Recently renovated with high-end finishes throughout.",
+    "features": [
+      "Floor-to-ceiling windows",
+      "Hardwood floors",
+      "Stainless steel appliances",
+      "In-unit washer/dryer",
+      "Building amenities",
+      "Walk score 95"
+    ],
+    "coordinates": {
+      "lat": 47.6062,
+      "lng": -122.3321
+    },
+    "listingDate": "2024-01-15T00:00:00.000Z",
+    "status": "for-sale",
+    "featured": true
+  },
+  {
+    "Id": 2,
+    "title": "Charming Victorian Home",
+    "price": 1250000,
+    "address": {
+      "street": "456 Oak Avenue",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94102"
+    },
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "squareFeet": 1800,
+    "propertyType": "House",
+    "photos": [
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2058&q=80"
+    ],
+    "description": "Beautiful Victorian home with original architectural details preserved. Located in a quiet residential neighborhood with tree-lined streets and excellent schools nearby.",
+    "features": [
+      "Original hardwood floors",
+      "Crown molding",
+      "Updated kitchen",
+      "Private garden",
+      "Garage parking",
+      "Near public transport"
+    ],
+    "coordinates": {
+      "lat": 37.7749,
+      "lng": -122.4194
+    },
+    "listingDate": "2024-01-10T00:00:00.000Z",
+    "status": "for-sale",
+    "featured": true
+  },
+  {
+    "Id": 3,
+    "title": "Luxury Penthouse Suite",
+    "price": 2500000,
+    "address": {
+      "street": "789 Skyline Drive",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10001"
+    },
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "squareFeet": 2800,
+    "propertyType": "Condo",
+    "photos": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80",
+      "https://images.unsplash.com/photo-1591825729269-caeb344f6df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    ],
+    "description": "Exclusive penthouse with panoramic city views. Premium finishes, private elevator access, and rooftop terrace. The epitome of luxury living in Manhattan.",
+    "features": [
+      "360-degree city views",
+      "Private elevator",
+      "Rooftop terrace",
+      "Smart home technology",
+      "Wine cellar",
+      "Concierge service"
+    ],
+    "coordinates": {
+      "lat": 40.7128,
+      "lng": -74.0060
+    },
+    "listingDate": "2024-01-05T00:00:00.000Z",
+    "status": "for-sale",
+    "featured": true
+  },
+  {
+    "Id": 4,
+    "title": "Cozy Apartment Near Campus",
+    "price": 2200,
+    "address": {
+      "street": "321 University Blvd",
+      "city": "Austin",
+      "state": "TX",
+      "zipCode": "78705"
+    },
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "squareFeet": 650,
+    "propertyType": "Apartment",
+    "photos": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    ],
+    "description": "Perfect for students or young professionals. Walking distance to university campus and downtown entertainment district. Modern amenities in a vibrant neighborhood.",
+    "features": [
+      "Near UT campus",
+      "Updated appliances",
+      "Pool access",
+      "Fitness center",
+      "Pet-friendly",
+      "Parking included"
+    ],
+    "coordinates": {
+      "lat": 30.2672,
+      "lng": -97.7431
+    },
+    "listingDate": "2024-01-12T00:00:00.000Z",
+    "status": "for-rent"
+  },
+  {
+    "Id": 5,
+    "title": "Suburban Family Home",
+    "price": 650000,
+    "address": {
+      "street": "654 Maple Street",
+      "city": "Denver",
+      "state": "CO",
+      "zipCode": "80202"
+    },
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "squareFeet": 2400,
+    "propertyType": "House",
+    "photos": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80"
+    ],
+    "description": "Spacious family home in a quiet suburban neighborhood. Large backyard perfect for children and pets. Close to top-rated schools and parks.",
+    "features": [
+      "Large backyard",
+      "2-car garage",
+      "Open floor plan",
+      "Fireplace",
+      "Near schools",
+      "Quiet neighborhood"
+    ],
+    "coordinates": {
+      "lat": 39.7392,
+      "lng": -104.9903
+    },
+    "listingDate": "2024-01-08T00:00:00.000Z",
+    "status": "for-sale",
+    "featured": true
+  },
+  {
+    "Id": 6,
+    "title": "Beachfront Rental",
+    "price": 4500,
+    "address": {
+      "street": "987 Ocean Drive",
+      "city": "Miami",
+      "state": "FL",
+      "zipCode": "33139"
+    },
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "squareFeet": 1400,
+    "propertyType": "Condo",
+    "photos": [
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80",
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    ],
+    "description": "Wake up to ocean views every morning in this stunning beachfront condo. Direct beach access and all the amenities of South Beach at your doorstep.",
+    "features": [
+      "Ocean views",
+      "Direct beach access",
+      "Pool and spa",
+      "Valet parking",
+      "24/7 security",
+      "Balcony"
+    ],
+    "coordinates": {
+      "lat": 25.7617,
+      "lng": -80.1918
+    },
+    "listingDate": "2024-01-03T00:00:00.000Z",
+    "status": "for-rent",
+    "featured": true
+  },
+  {
+    "Id": 7,
+    "title": "Historic Brownstone",
+    "price": 1800000,
+    "address": {
+      "street": "147 Beacon Street",
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02116"
+    },
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "squareFeet": 2200,
+    "propertyType": "Townhouse",
+    "photos": [
+      "https://images.unsplash.com/photo-1575517111478-7f6afd0973db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    ],
+    "description": "Elegant historic brownstone in the heart of Back Bay. Original details beautifully preserved while incorporating modern conveniences. Prime location near parks and shopping.",
+    "features": [
+      "Historic character",
+      "Original details",
+      "Modern updates",
+      "Prime location",
+      "Near parks",
+      "Walkable neighborhood"
+    ],
+    "coordinates": {
+      "lat": 42.3601,
+      "lng": -71.0589
+    },
+    "listingDate": "2024-01-07T00:00:00.000Z",
+    "status": "for-sale"
+  },
+  {
+    "Id": 8,
+    "title": "Mountain View Chalet",
+    "price": 950000,
+    "address": {
+      "street": "555 Alpine Road",
+      "city": "Aspen",
+      "state": "CO",
+      "zipCode": "81611"
+    },
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "squareFeet": 2000,
+    "propertyType": "House",
+    "photos": [
+      "https://images.unsplash.com/photo-1520637836862-4d197d17c10a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2029&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    ],
+    "description": "Stunning mountain chalet with panoramic views of the Rockies. Perfect for year-round recreation with skiing in winter and hiking in summer. Luxury mountain living at its finest.",
+    "features": [
+      "Mountain views",
+      "Ski access",
+      "Fireplace",
+      "Deck",
+      "Hot tub",
+      "Garage"
+    ],
+    "coordinates": {
+      "lat": 39.1911,
+      "lng": -106.8175
+    },
+    "listingDate": "2024-01-02T00:00:00.000Z",
+    "status": "for-sale"
+  }
+]
