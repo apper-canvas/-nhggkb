@@ -1,10 +1,21 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { toast } from 'react-toastify';
 import ApperIcon from '@/components/ApperIcon';
 import Badge from '@/components/atoms/Badge';
+import Button from '@/components/atoms/Button';
 import PhotoGallery from '@/components/molecules/PhotoGallery';
 import { format } from 'date-fns';
-
 const PropertyDetails = ({ property }) => {
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [contactForm, setContactForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: `Hi, I'm interested in the property at ${property?.address?.street || 'this address'}. Could you please provide more information?`
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const formatPrice = (price) => {
     if (property.status === 'for-rent') {
       return `$${price.toLocaleString()}/mo`;
@@ -15,6 +26,146 @@ const PropertyDetails = ({ property }) => {
   const formatDate = (dateString) => {
     return format(new Date(dateString), 'MMMM d, yyyy');
   };
+
+  const handleSendMessage = () => {
+    setShowContactModal(true);
+  };
+
+  const handleContactFormChange = (field, value) => {
+    setContactForm(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleContactFormSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!contactForm.name.trim() || !contactForm.email.trim() || !contactForm.message.trim()) {
+      toast.error('Please fill in all required fields');
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast.success('Message sent successfully! We\'ll get back to you soon.');
+      setShowContactModal(false);
+      setContactForm({
+        name: '',
+        email: '',
+        phone: '',
+        message: `Hi, I'm interested in the property at ${property?.address?.street || 'this address'}. Could you please provide more information?`
+      });
+    } catch (error) {
+      toast.error('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const ContactModal = () => (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+      onClick={(e) => e.target === e.currentTarget && setShowContactModal(false)}
+    >
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.95, opacity: 0 }}
+        className="bg-white rounded-lg p-6 w-full max-w-md shadow-xl"
+      >
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-heading font-semibold">Send Message</h3>
+          <button
+            onClick={() => setShowContactModal(false)}
+            className="text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            <ApperIcon name="X" className="w-5 h-5" />
+          </button>
+        </div>
+        
+        <form onSubmit={handleContactFormSubmit} className="space-y-4">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+              Name *
+            </label>
+            <input
+              type="text"
+              id="name"
+              value={contactForm.name}
+              onChange={(e) => handleContactFormChange('name', e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              required
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              Email *
+            </label>
+            <input
+              type="email"
+              id="email"
+              value={contactForm.email}
+              onChange={(e) => handleContactFormChange('email', e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              required
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+              Phone
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              value={contactForm.phone}
+              onChange={(e) => handleContactFormChange('phone', e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+              Message *
+            </label>
+            <textarea
+              id="message"
+              value={contactForm.message}
+              onChange={(e) => handleContactFormChange('message', e.target.value)}
+              rows={4}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
+              required
+            />
+          </div>
+          
+          <div className="flex gap-3 pt-4">
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => setShowContactModal(false)}
+              className="flex-1"
+            >
+              Cancel
+            </Button>
+            <Button
+              type="submit"
+              variant="primary"
+              disabled={isSubmitting}
+              className="flex-1"
+            >
+              {isSubmitting ? 'Sending...' : 'Send Message'}
+            </Button>
+          </div>
+        </form>
+      </motion.div>
+    </motion.div>
+  );
 
   return (
     <motion.div
@@ -144,16 +295,20 @@ const PropertyDetails = ({ property }) => {
             <ApperIcon name="Phone" className="w-5 h-5" />
             <span>Call Now</span>
           </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center justify-center space-x-2 bg-white text-primary px-6 py-3 rounded-md font-medium hover:bg-gray-50 transition-colors"
+<Button
+            variant="outline"
+            size="lg"
+            onClick={handleSendMessage}
+            className="bg-white text-primary hover:bg-gray-50 border-white"
+            leftIcon="Mail"
           >
-            <ApperIcon name="Mail" className="w-5 h-5" />
-            <span>Send Message</span>
-          </motion.button>
+            Send Message
+          </Button>
         </div>
-      </div>
+</div>
+
+      {/* Contact Modal */}
+      {showContactModal && <ContactModal />}
     </motion.div>
   );
 };
